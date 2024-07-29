@@ -1,50 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Budget expense tracker</title>
   </head>
   <body>
-    <div>
-      <div>
-        <p>Enter Total Amount</p>
-        <input type="number" id="userInput1" placeholder="Total budget">
+    <div class="section1">
+      <div class="userField">
+        <div>
+          <p>Enter Total Amount</p>
+          <input type="number" id="userInput1" placeholder="Total budget">
+        </div>
+        <div style="margin-top: 10px;">
+          <p>Enter Product Name</p>
+          <input type="text" id="userInput2" placeholder="Product name">
+        </div>
+        <div style="margin-top: 10px;">
+          <p>Enter Amount</p>
+          <input type="number" id="userInput3" placeholder="Amount">
+        </div>
+        <div style="margin-top: 10px;">
+          <p>Enter Product Quantity</p>
+          <input type="number" id="userInput4" placeholder="Quantity">
+        </div>
       </div>
-      <div>
-        <p>Enter Product Name</p>
-        <input type="text" id="userInput2" placeholder="Product name">
-      </div>
-      <div>
-        <p>Enter Amount</p>
-        <input type="number" id="userInput3" placeholder="Amount">
-      </div>
-      <div>
-        <p>Enter Product Quantity</p>
-        <input type="number" id="userInput4" placeholder="Quantity">
-      </div>
+      <button id="addButton" style="margin-top: 10px;">Add</button>
+      <table id="resultTable" class="table">
+        <thead>
+          <tr>
+            <th style="padding-right: 15px;">Product Name</th>
+            <th style="padding-right: 15px;">Price</th>
+            <th style="padding-right: 15px;">Action</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody" style="align-items: center;">
+        </tbody>
+      </table>
     </div>
-    <button id="addButton">Add</button>
-    <table id="resultTable">
-      <thead>
-        <tr>
-          <th>Product Name</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody id="tableBody">
-      </tbody>
-    </table>
-    <div>
+    
+    <div class="display_transaction">
       <div id="budget">
         <p>Total Budget</p>
-        <h1 id="totalBudget"></h1>
+        <h1 id="totalBudget">0</h1>
       </div>
-      <div>
-        <p>Expenses</p>
-        <h1 id="expense"></h1>
-      </div>
-    </div>
+      <div style="display: inline-block;">
+        <div>
+          <p>Expenses</p>
+          <h1 id="expense">0</h1>
+        </div>
+        <div>
+          <p>Total Balance</p>
+          <h1 id="balance">0</h1>
+        </div>
     <script src="budget.js"></script>
   </body>
 </html>
